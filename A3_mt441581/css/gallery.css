@@ -1,0 +1,145 @@
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 1fr; 
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+/* child selector */ 
+
+header > img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* sibling selector */
+
+header + nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.pottery-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.pottery-item {
+    text-align: center;
+}
+
+.pottery-item img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+iframe {
+    grid-row: 3;
+    grid-column: 1;
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.social-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin-right: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333; 
+    border-radius: 8px; 
+    margin-bottom: 15px;
+}
+
+a {
+    color: #3498db; 
+    text-decoration: none; 
+    
+}
+
+a:hover {
+    color: #ff9900; 
+}
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+}

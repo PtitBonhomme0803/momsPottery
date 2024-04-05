@@ -1,0 +1,17 @@
+body {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+header {
+    background-color: #555;
+}
+
+nav a {
+    color: #fff;
+}
+
+footer {
+    background-color: #555;
+    color: #fff;
+}
